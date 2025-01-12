@@ -154,3 +154,15 @@ source <(fzf --zsh)
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+[[ ! -r '/home/klungs/.opam/opam-init/init.zsh' ]] || source '/home/klungs/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+# END opam configuration
+
+# To customize prompt, run `p10k configure` or edit ~/.dotfiles/zsh/.p10k.zsh.
+[[ ! -f ~/.dotfiles/zsh/.p10k.zsh ]] || source ~/.dotfiles/zsh/.p10k.zsh
